@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/game/light.png" type="Texture" id=1]
+[ext_resource path="res://assets/game/torch.png" type="Texture" id=2]
+
+[sub_resource type="Curve" id=37]
+min_value = -1.0
+_data = [ Vector2( 0, 0.981818 ), 0.0, 0.0, 0, 0, Vector2( 0.646739, 0.847727 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 37 )
+
+[sub_resource type="Curve" id=38]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.674033, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 38 )
+
+[sub_resource type="ParticlesMaterial" id=39]
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 71.47
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 5.0
+scale_curve = SubResource( 12 )
+hue_variation = 0.22
+hue_variation_curve = SubResource( 8 )
+
+[node name="Torch" type="Sprite"]
+position = Vector2( 80, 20 )
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 1 )
+texture_scale = 1.42
+color = Color( 0.968627, 1, 0, 1 )
+energy = 0.57
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+position = Vector2( -4, -4 )
+amount = 5
+process_material = SubResource( 39 )

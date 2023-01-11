@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/spiderwalk.mp3-fd02dff7f2dd26357fa0807ed59aede9.mp3str"
+
+[deps]
+
+source_file="res://sounds/fx/spiderwalk.mp3"
+dest_files=[ "res://.import/spiderwalk.mp3-fd02dff7f2dd26357fa0807ed59aede9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

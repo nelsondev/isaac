@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/n.mp3-e46e757f1de12d82b1e04343b4a6aa1b.mp3str"
+
+[deps]
+
+source_file="res://sounds/letters/n.mp3"
+dest_files=[ "res://.import/n.mp3-e46e757f1de12d82b1e04343b4a6aa1b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

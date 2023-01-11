@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/spider_hit.mp3-b6ba6b12f7cca7595fb70690d4a3d05b.mp3str"
+
+[deps]
+
+source_file="res://sounds/fx/spider_hit.mp3"
+dest_files=[ "res://.import/spider_hit.mp3-b6ba6b12f7cca7595fb70690d4a3d05b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

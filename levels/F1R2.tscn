@@ -1,0 +1,449 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/resources/sheet.png" type="Texture" id=1]
+[ext_resource path="res://assets/tiles/ground.png" type="Texture" id=2]
+[ext_resource path="res://sounds/music/peni.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/tiles/indoor.png" type="Texture" id=4]
+[ext_resource path="res://scenes/Torch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Pot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/music/huh.wav" type="AudioStream" id=7]
+[ext_resource path="res://sounds/drip.mp3" type="AudioStream" id=8]
+[ext_resource path="res://scenes/Box.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Barrel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Spider.tscn" type="PackedScene" id=11]
+[ext_resource path="res://levels/Bounds.gd" type="Script" id=14]
+
+[sub_resource type="Curve" id=38]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.480663, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=39]
+curve = SubResource( 38 )
+
+[sub_resource type="ParticlesMaterial" id=40]
+emission_shape = 1
+emission_sphere_radius = 128.0
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 42.35
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 50.0
+scale_curve = SubResource( 39 )
+color = Color( 0.133333, 0.12549, 0.203922, 1 )
+hue_variation = 0.06
+hue_variation_random = 0.79
+
+[sub_resource type="TileSet" id=1]
+0/name = "ground.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 1, 1, 8, 8 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "ground.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 10, 1, 8, 8 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "ground.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 19, 1, 8, 8 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "ground.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 28, 1, 8, 8 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "ground.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 1, 10, 8, 8 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "ground.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 10, 10, 8, 8 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "ground.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 19, 10, 8, 8 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "ground.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 10, 19, 8, 8 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "ground.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 19, 19, 8, 8 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "indoor.png 9"
+9/texture = ExtResource( 4 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 0, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+
+[sub_resource type="TileSet" id=28]
+0/name = "Plants"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 8, 8 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 8, 8 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Mushrooms"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 32, 64, 16 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 8, 8 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="Curve" id=32]
+_data = [ Vector2( 0, 0.418182 ), 0.0, 0.0, 0, 0, Vector2( 0.8877, 0.772727 ), 0.0, 0.0, 0, 0, Vector2( 0.941176, 0.218182 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=33]
+curve = SubResource( 32 )
+
+[sub_resource type="ParticlesMaterial" id=34]
+emission_shape = 2
+emission_box_extents = Vector3( 32, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 2.0
+scale_curve = SubResource( 33 )
+color = Color( 0.0784314, 0.392157, 0.92549, 1 )
+
+[sub_resource type="Animation" id=35]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer2D:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=36]
+resource_name = "default"
+length = 5.431
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.4, 3.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer2D:pitch_scale")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.4, 3.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.24, 1.16 ]
+}
+
+[sub_resource type="GDScript" id=37]
+script/source = "extends Area2D
+
+onready var DOOR = preload(\"res://scenes/Door.tscn\")
+var health = 1
+
+func damage(_amount):
+	$Sprite.visible = false
+	$Particles2D.restart()
+	$Particles2D.emitting = true
+	$CollisionShape2D.call_deferred(\"set_disabled\", true)
+	$AudioStreamPlayer2D.pitch_scale = rand_range(0.9, 1.1)
+	$AudioStreamPlayer2D.play()
+	
+	var door = DOOR.instance()
+	get_parent().add_child(door)
+	door.set_global_position(get_global_position())
+	door.LEVEL = 3
+	$AudioStreamPlayer2D2.play()
+	
+	yield(get_tree().create_timer(5.0), \"timeout\")
+	queue_free()
+"
+
+[node name="F1R2" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.1, 1.1 )
+
+[node name="Particles2D" type="Particles2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -24, -16 )
+amount = 24
+lifetime = 20.0
+preprocess = 227.24
+randomness = 1.0
+local_coords = false
+process_material = SubResource( 40 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+autoplay = true
+
+[node name="Spawn" type="Position2D" parent="."]
+position = Vector2( 0, 32 )
+
+[node name="Bounds" type="StaticBody2D" parent="." groups=["damagable"]]
+script = ExtResource( 14 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bounds"]
+polygon = PoolVector2Array( -80, 52, 76, 52, 76, -68, -76, -68, -76, -64, 72, -64, 72, 48, -76, 48, -76, -64, -80, -64 )
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( -524294, 9, 0, -524291, 9, 0, -524290, 9, 0, -524289, 9, 0, -589824, 9, 0, -458762, 9, 0, -458759, 9, 0, -458758, 9, 0, -458757, 9, 0, -458756, 9, 0, -458755, 9, 0, -458754, 9, 0, -458753, 9, 0, -524288, 9, 0, -524287, 9, 0, -524286, 9, 0, -524283, 9, 0, -393226, 9, 0, -393223, 9, 0, -393222, 9, 0, -393219, 9, 0, -393218, 9, 0, -393217, 9, 0, -458752, 9, 0, -458751, 9, 0, -458750, 9, 0, -458749, 9, 0, -458748, 9, 0, -458747, 9, 0, -327688, 9, 0, -327687, 9, 0, -327686, 9, 0, -327685, 9, 0, -327684, 9, 0, -327683, 9, 0, -327682, 9, 0, -327681, 9, 0, -393216, 9, 0, -393215, 9, 0, -393211, 9, 0, -262152, 9, 0, -262151, 9, 0, -262148, 9, 0, -262147, 9, 0, -262145, 9, 0, -327680, 9, 0, -327676, 9, 0, -196616, 9, 0, -196615, 9, 0, -196614, 9, 0, -196613, 9, 0, -196612, 9, 0, -196609, 9, 0, -262144, 9, 0, -262143, 9, 0, -262142, 9, 0, -262141, 9, 0, -262140, 9, 0, -262139, 9, 0, -131082, 9, 0, -131080, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -65546, 9, 0, -65544, 9, 0, -65541, 9, 0, -65540, 9, 0, -65538, 9, 0, -65537, 9, 0, -131072, 9, 0, -131071, 9, 0, -131070, 9, 0, -131069, 9, 0, -131068, 9, 0, -131067, 9, 0, -10, 9, 0, -9, 9, 0, -8, 9, 0, -7, 9, 0, -6, 9, 0, -5, 9, 0, -4, 9, 0, -3, 9, 0, -2, 9, 0, -1, 9, 0, -65536, 9, 0, -65532, 9, 0, -65531, 9, 0, 65527, 9, 0, 65528, 9, 0, 65530, 9, 0, 65531, 9, 0, 65532, 9, 0, 65533, 9, 0, 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 131064, 9, 0, 131065, 9, 0, 131066, 9, 0, 131068, 9, 0, 131070, 9, 0, 131071, 9, 0, 65536, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 196602, 9, 0, 196603, 9, 0, 131076, 9, 0, 131077, 9, 0, 262134, 9, 0, 262135, 9, 0, 262136, 9, 0, 262137, 9, 0, 262138, 9, 0, 262139, 9, 0, 262140, 9, 0, 262141, 9, 0, 262142, 9, 0, 262143, 9, 0, 196608, 9, 0, 196609, 9, 0, 196610, 9, 0, 196611, 9, 0, 196612, 9, 0, 196613, 9, 0 )
+
+[node name="Decals" type="TileMap" parent="."]
+tile_set = SubResource( 28 )
+cell_size = Vector2( 8, 8 )
+format = 1
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Particles2D" type="Particles2D" parent="YSort"]
+position = Vector2( 0, -64 )
+amount = 1
+process_material = SubResource( 34 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="YSort/Particles2D"]
+stream = ExtResource( 8 )
+volume_db = -11.198
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="YSort/Particles2D"]
+autoplay = "default"
+anims/RESET = SubResource( 35 )
+anims/default = SubResource( 36 )
+
+[node name="Pot" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -64, -32 )
+
+[node name="Pot2" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -64, -20 )
+
+[node name="Pot3" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -48, -28 )
+
+[node name="Pot4" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 36, -52 )
+script = SubResource( 37 )
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="YSort/Pot4"]
+stream = ExtResource( 7 )
+
+[node name="Pot5" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 36, -40 )
+
+[node name="Pot6" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 52, -48 )
+
+[node name="Pot7" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -28, 24 )
+
+[node name="Pot8" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -28, 36 )
+
+[node name="Pot9" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( -12, 28 )
+
+[node name="Torch" parent="YSort" instance=ExtResource( 5 )]
+
+[node name="Torch2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( -80, -36 )
+scale = Vector2( -1, 1 )
+
+[node name="Box" parent="." instance=ExtResource( 9 )]
+position = Vector2( -60, 0 )
+
+[node name="Box3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 12, -40 )
+
+[node name="Barrel" parent="." instance=ExtResource( 10 )]
+position = Vector2( -39, 1 )
+
+[node name="Barrel2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 24, 4 )
+
+[node name="Barrel3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 40, 4 )
+
+[node name="Barrel4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 35, -8 )
+
+[node name="Barrel5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 60, 8 )
+
+[node name="Box2" parent="." instance=ExtResource( 9 )]
+position = Vector2( -48, -14 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Spider2" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 20, -20 )
+
+[node name="Spider3" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 0, -7 )
+time = 32
+
+[node name="Spider" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -24, 8 )
+time = 64

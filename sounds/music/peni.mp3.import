@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/peni.mp3-23d8fe65718bf8056eb8a05a057ef6bf.mp3str"
+
+[deps]
+
+source_file="res://sounds/music/peni.mp3"
+dest_files=[ "res://.import/peni.mp3-23d8fe65718bf8056eb8a05a057ef6bf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

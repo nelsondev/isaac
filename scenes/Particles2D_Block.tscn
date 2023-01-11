@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://levels/EntranceRoom.gd" type="Script" id=1]
+[ext_resource path="res://assets/decals/cloud.png" type="Texture" id=2]
+
+[sub_resource type="Curve" id=38]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.530387, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=39]
+curve = SubResource( 38 )
+
+[sub_resource type="ParticlesMaterial" id=40]
+emission_shape = 2
+emission_box_extents = Vector3( 64, 64, 64 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+angular_velocity = 4.97
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 1.5
+scale_curve = SubResource( 39 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Particles2D_Block" type="Particles2D"]
+light_mask = 0
+position = Vector2( -144, 0 )
+z_index = 5
+amount = 68
+lifetime = 10.0
+preprocess = 10.0
+process_material = SubResource( 40 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -80, -32, -80, 36, 80, 36, 80, -32 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

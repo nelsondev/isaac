@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/itembox_thingy.png-a42438afa8d3d8da3a4fede00d54ecd6.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/interface/itembox_thingy.png"
+dest_files=[ "res://.import/itembox_thingy.png-a42438afa8d3d8da3a4fede00d54ecd6.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=2
+flags/repeat=true
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=0
+process/fix_alpha_border=false
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

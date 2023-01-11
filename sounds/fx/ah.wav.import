@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ah.wav-9231ee8dd8a139d4cd31d1cf8952d6d5.sample"
+
+[deps]
+
+source_file="res://sounds/fx/ah.wav"
+dest_files=[ "res://.import/ah.wav-9231ee8dd8a139d4cd31d1cf8952d6d5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

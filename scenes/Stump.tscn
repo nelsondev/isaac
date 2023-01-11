@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/decals/stump.png" type="Texture" id=1]
+
+[sub_resource type="Curve" id=4]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, -207 ), 0.0, 0.0, 0, 0, Vector2( 1, 360 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 1
+emission_sphere_radius = 11.72
+flag_disable_z = true
+spread = 5.56
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 61.3
+orbit_velocity = 0.01
+orbit_velocity_random = 0.0
+angle_curve = SubResource( 5 )
+scale = 2.78
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( -16, 0, -8, -4, -8, -12, -13, -14, -21, -22, -21, -32, -17, -37, -14, -38, -13, -43, -11, -45, -8, -46, -6, -46, -1, -43, 11, -43, 25, -29, 25, -23, 19, -18, 18, -14, 17, -12, 15, -11, 12, -11, 12, -4, 16, 0, 12, 0, 12, 4, 4, 4, 4, 12, -4, 4, -12, 8, -8, 0 )
+
+[node name="Stump" type="Sprite"]
+position = Vector2( 24, -32 )
+z_index = 1
+texture = ExtResource( 1 )
+offset = Vector2( 0, -16 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+modulate = Color( 0.215686, 0.592157, 0.364706, 1 )
+show_behind_parent = true
+position = Vector2( -0.318707, -31.9984 )
+amount = 5
+lifetime = 10.0
+preprocess = 10.0
+explosiveness = 0.28
+randomness = 1.0
+local_coords = false
+process_material = SubResource( 6 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 7 )
